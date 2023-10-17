@@ -37,7 +37,7 @@ void draw() {
       int loc = x + (y * img.width);
       //      //fill(img.pixels[loc]);
       //      rectMode(CENTER);
-      float bt=brightness(img.pixels[loc]);
+      float bt=brightness(img.pixels[loc]);//（读取像素
       float d=dist(x,y,mouseX,mouseY);
       s=map(d,0,width,1,30);
       ellipseMode(CENTER);
@@ -46,11 +46,11 @@ void draw() {
   }
 }
 
-void tile(float bt, float sSize, int ellipseX, int ellipseY) {
-  int iter= int(map(bt, 0, 255, 10, 0));
+void tile(float bt, float sSize, int ellipseX, int ellipseY) {//迭代图片明度
+  int iter= int(map(bt, 0, 255, 10, 0));//迭代次数
   if (iter>0) {
     float interval=sSize/(iter*2);
-    for (int i=0; i<iter; i++) {
+    for (int i=0; i<iter; i++) {//同心圆 sSize=第一个圆与第二个圆的间距
       float ellipseSize=sSize-interval*i*2;
       ellipse(ellipseX, ellipseY, ellipseSize, ellipseSize);
     }
