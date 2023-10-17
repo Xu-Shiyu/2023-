@@ -1,4 +1,10 @@
 [第五讲：创意编程元素｜静态与动态图像（续）]作业：创意图像
+
+
+
+
+
+
 <img width="539" alt="搜狗截图20231017235025" src="https://github.com/Xu-Shiyu/2023-/assets/146098228/a9f41ded-4349-42a6-ae9f-82f9c3698ebc">
 
 
@@ -51,5 +57,14 @@ void tile(float bt, float sSize, int ellipseX, int ellipseY) {
   }
 }
 Uploading xushiyu231012b.pde…]()
+
+
+
+
+
+
+
+
+
 
 ![selfie](https://github.com/Xu-Shiyu/2023-/assets/146098228/b3353e80-ed4b-421d-903b-3270ae8b673c)
