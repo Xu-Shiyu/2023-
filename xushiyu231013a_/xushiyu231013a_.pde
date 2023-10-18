@@ -35,13 +35,7 @@ void draw() {
     beginRecord(PDF, "output/noise"+imageName+".pdf");
   }
 
-  /**
-   * [for description]
-   * @Author   bit2atom
-   * @DateTime 2020-12-06 T09:03:55+0800
-   * @param    {[type]}                 int p             [description]
-   * @return   {[type]}                     [description]
-   */
+
   for (int p = 0; p < sampleNum; p += 1) {
     x = random(img.width);
     y = random(img.height);
@@ -81,17 +75,7 @@ void draw() {
   noLoop();
 }
 
-// returns a greyscale value from image at given location
-// retrun value is scaled between 0 and 1
-/**
- * [get_grey_from_image description]
- * @Author   bit2atom
- * @DateTime 2020-12-06 T09:03:22+0800
- * @param    {[type]}                 PImage im            [description]
- * @param    {[type]}                 int    x             [description]
- * @param    {[type]}                 int    y             [description]
- * @return   {[type]}                        [description]
- */
+
 float get_grey_from_image(PImage im, int x, int y) {
   // red value
   float r = red(im.pixels[x + y*im.width]);
@@ -104,15 +88,4 @@ float get_grey_from_image(PImage im, int x, int y) {
   // https://www.johndcook.com/blog/2009/08/24/algorithms-convert-color-grayscale/
   float luminosity = (0.21*r + 0.72*g + 0.07*b) / 255.0;
   return luminosity;
-}
-
-void keyPressed() {
-  if (key == 'r') {
-    countNumOfLines = 0;
-    loop();
-  }
-  if (key == 'p') {
-    savePDF = true;
-    loop();
-  }
 }
